@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>csms</title>
+	<link href="asset/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="asset/css/style.css">
+	<link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+</head>
+<body>
+
+	<nav class="topnav navbar navbar-default navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-list">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand custom-navbar-brand">CSMS</a>
+           </div>
+            <div class="collapse navbar-collapse" id="target-list">
+              <ul class="nav navbar-nav">
+                <li><a href="#" class="hvr-underline-reveal">Home</a></li>
+                <li><a href="#" class="hvr-underline-reveal">About</a></li>
+                <li><a href="#" class="hvr-underline-reveal nav-active">App</a></li>
+                <li><a href="#" class="hvr-underline-reveal">Login</a></li>
+                <li><a href="#" class="hvr-underline-reveal">Contact</a></li>
+              </ul>
+              <ul class="nav navbar-nav nav-custom-float">
+              	<li><a href="#">Welcome, username</a></li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+	<section>
+		<div class="col-md-3 nopadding">
+			<div id="MainMenu">
+			  <div class="list-group panel">
+			    <a href="#demo3" class="list-group-item list-group-item-success strong" data-toggle="collapse" data-parent="#MainMenu">Kapal A <i class="fa fa-caret-down"></i></a>
+			    <div class="collapse" id="demo3">
+			      <a href="#SubMenu1" class="list-group-item strong" data-toggle="collapse" data-parent="#SubMenu1">Subitem 1 <i class="fa fa-caret-down"></i></a>
+			      <div class="collapse list-group-submenu" id="SubMenu1">
+			        <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 1 a</a>
+			        <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 2 b</a>
+			        <a href="#SubSubMenu1" class="list-group-item strong" data-toggle="collapse" data-parent="#SubSubMenu1"><i class="glyphicon glyphicon-user"></i> Subitem 3 c <i class="fa fa-caret-down"></i></a>
+			        <div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu1">
+			          <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 1</a>
+			          <a href="#" class="list-group-item" data-parent="#SubSubMenu1">Sub sub item 2</a>
+			        </div>
+			        <a href="#" class="list-group-item" data-parent="#SubMenu1">Subitem 4 d</a>
+			        <a href="#SubSubMenu3" class="list-group-item strong" data-toggle="collapse" data-parent="#SubSubMenu3"><i class="glyphicon glyphicon-dashboard"></i> Subitem 5 e <i class="fa fa-caret-down"></i></a>
+			        	<div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu3">
+			          		<a href="#" class="list-group-item" data-parent="#SubSubMenu3">Sub sub item 5.1</a>
+			          		<a href="#" class="list-group-item" data-parent="#SubSubMenu3">Sub sub item 5.2</a>
+			        	</div>
+			      </div>
+			      <a href="#" class="list-group-item">Subitem 2</a>
+			      <a href="#" class="list-group-item">Subitem 3</a>
+			    </div>
+			    <a href="#demo4" class="list-group-item list-group-item-success strong" data-toggle="collapse" data-parent="#MainMenu">Kapal B <i class="fa fa-caret-down"></i></a>
+			    <div class="collapse" id="demo4">
+			      <a href="#" class="list-group-item">Subitem 1</a>
+			      <a href="#SubSubMenu4" class="list-group-item strong" data-toggle="collapse" data-parent="#SubSubMenu4"><i class="glyphicon glyphicon-thumbs-up"></i> Subitem 2 <i class="fa fa-caret-down"></i></a>
+			      <div class="collapse list-group-submenu list-group-submenu-1" id="SubSubMenu4">
+			        <a href="#" class="list-group-item" data-parent="#SubSubMenu1"><i class="glyphicon glyphicon-flag"></i> Sub sub item 1</a>
+			        <a href="#" class="list-group-item" data-parent="#SubSubMenu1"><i class="glyphicon glyphicon-cog"></i> Sub sub item 2</a>
+			        </div>
+			      <a href="#" class="list-group-item">Subitem 3</a>
+			    </div>
+			  </div>
+			</div>
+		</div>
+
+		<div class="col-md-9">
+			<div class="form-info">
+				<h2>IMPORT</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit porro praesentium facilis corporis, obcaecati labore laborum architecto quaerat placeat voluptate vel exercitationem quisquam dolores, iste veritatis! Maxime fuga in voluptatem!</p>
+			</div>
+			<form class="form-horizontal">
+				<div class="form-group">
+				    <label class="control-label col-sm-1" for="name">Nama</label>
+				    <div class="col-sm-6">
+				      <input type="text" class="form-control" id="name" placeholder="Masukkan nama file..">
+				    </div>
+				</div>
+				<!--
+				<div class="form-group">
+				    <label class="control-label col-sm-1" for="pwd">Folder</label>
+				    <div class="col-sm-6"> 
+				      <input type="file" name="img[]" class="file">
+				      <div class="input-group col-xs-12">
+				      <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+				      <input type="text" class="form-control" disabled placeholder="Pilih Folder...">
+				      <span class="input-group-btn">
+				        <button class="browse btn btn-primary" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+				      </span>
+				    </div>
+				    </div>
+				</div>
+				-->
+				<div class="form-group">
+				    <label class="control-label col-sm-1" for="pwd">File</label>
+				    <div class="col-sm-6"> 
+				      <input type="file" name="img[]" class="file">
+				      <div class="input-group col-xs-12">
+				      <span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
+				      <input type="text" class="form-control" disabled placeholder="Pilih Folder...">
+				      <span class="input-group-btn">
+				        <button class="browse btn btn-primary" type="button"><i class="glyphicon glyphicon-search"></i> Browse</button>
+				      </span>
+				    </div>
+				    </div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-1" for="folder">Folder</label>
+					<div class="col-md-6">
+						<select class="selectpicker" data-style="btn-primary" data-live-search="true">
+						  <option data-tokens="Kapal A">Kapal A</option>
+						  <option data-tokens="Kapal B">Kapal B</option>
+						  <option data-tokens="Kapal C">Kapal C</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-1" for="type">Type</label>
+					<div class="col-md-6">
+						<select class="selectpicker" data-style="btn-primary" data-live-search="true">
+						  <option data-tokens="admin">Admin</option>
+						  <option data-tokens="User Biasa">User Biasa</option>
+						  <option data-tokens="Superuser">Superuser</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group"> 
+				    <div class="col-sm-offset-1 col-sm-11">
+				      <button type="submit" class="btn btn-primary">Submit</button>
+				    </div>
+				</div>
+			</form>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+<script src="asset/js/bootstrap.min.js"></script>
+<script src="asset/js/form.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/i18n/defaults-*.min.js"></script>
+
+</body>
+</html>
