@@ -9,12 +9,11 @@
 	<link rel="stylesheet" href="asset/css/style.css">
 	<link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
-
 </head>
 <body>
 
 	<nav class="topnav navbar navbar-default navbar-static-top">
-        <div class="container-fluid">
+        <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-list">
                 <span class="icon-bar"></span>
@@ -36,18 +35,38 @@
 			          <li><a href="#">Manage</a></li>
 			        </ul>
 			    </li>
-                <li><a href="#" class="hvr-underline-reveal">Login</a></li>
+                <li><a href="login.html" class="hvr-underline-reveal">Login</a></li>
                 <li><a href="#" class="hvr-underline-reveal">Contact</a></li>
               </ul>
               <ul class="nav navbar-nav nav-custom-float">
-              	<li><a href="#">Welcome, username</a></li>
+              	<li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> Welcome , <font color="#FF0000"><?php echo $nama?></font><b class="caret"></b></a>
+                                        <ul role="menu" class="dropdown-menu"> 
+                                        <?php 
+                                       $username = $_SESSION['user'];
+      $sql = mysql_query("SELECT * FROM tbl_user WHERE username = '$username'");
+      $lol = mysql_fetch_array($sql);
+      $nama = $_SESSION['username'] = $lol['username'];
+      if($nama == "admin" ){
+                                       ?>
+                                        <li><a href="?menu=user"><span class="glyphicon glyphicon-registration-mark"></span> Daftar User</a></li>
+                                        <?php
+                                                } else {?>
+
+                                                <?php }?>
+                                <li><a href="?menu=pengaturan"><span class="glyphicon glyphicon-cog"></span> Pengaturan</a></li>
+                            <li class="divider"></li>
+                        <li><a href="logout.php"OnClick="return confirm('Apakah anda yakin ingin logout <?php echo $nama?> ?')"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                 </li>
               </ul>
           </div>
       </div>
     </nav>
 
 	<section>
-		<div class="col-md-3 nopadding">
+		<div class="container">
+			<div class="col-md-3 nopadding">
 			<div id="MainMenu">
 			  <div class="list-group panel">
 			    <a href="#demo3" class="list-group-item list-group-item-success strong" data-toggle="collapse" data-parent="#MainMenu">Kapal A <i class="fa fa-caret-down"></i></a>
@@ -145,15 +164,20 @@
 						</select>
 					</div>
 				</div>
-				<div class="form-group"> 
+				<div class="form-group form-paddingbot"> 
 				    <div class="col-sm-offset-1 col-sm-11">
 				      <button type="submit" class="btn btn-primary">Submit</button>
 				    </div>
 				</div>
 			</form>
 		</div>
+		</div>
 	</section>
-
+	
+	<div class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container"><p class="text-center"><br>Copyright © R2J - Powered by Transvision ||<A NAME="Aku_Link" HREF=""
+   onclick="return showDetails('pp.php')"> Private Profile</A></p></div>
+</div>
 
 
 
