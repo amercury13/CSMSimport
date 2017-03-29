@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pengaturan user | CSMS</title>
+	<link href="asset/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" href="asset/css/style.css">
+	<link rel="stylesheet" href="asset/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+</head>
+<body>
+
+	<nav class="topnav navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#target-list">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#" class="navbar-brand custom-navbar-brand">CSMS</a>
+           </div>
+            <div class="collapse navbar-collapse" id="target-list">
+              <ul class="nav navbar-nav">
+                <li><a href="#" class="hvr-underline-reveal">Home</a></li>
+                <li><a href="#" class="hvr-underline-reveal">About</a></li>
+                <li class="dropdown">
+			        <a class="dropdown-toggle hvr-underline-reveal" data-toggle="dropdown" href="#">App
+			        <span class="caret"></span></a>
+			        <ul class="dropdown-menu">
+			          <li><a href="index.html">Import</a></li>
+			          <li><a href="export.html">Export</a></li>
+			          <li><a href="#">Manage</a></li>
+			        </ul>
+			    </li>
+                <li><a href="login.html" class="hvr-underline-reveal">Login</a></li>
+                <li><a href="#" class="hvr-underline-reveal">Contact</a></li>
+              </ul>
+              <ul class="nav navbar-nav nav-custom-float">
+              	<li class="dropdown">
+                    <a data-toggle="dropdown" class="dropdown-toggle" href="#"><span class="glyphicon glyphicon-user"></span> Welcome , <font color="#FF0000"><?php echo $nama?></font><b class="caret"></b></a>
+                                        <ul role="menu" class="dropdown-menu"> 
+                                        <?php 
+                                       $username = $_SESSION['user'];
+      $sql = mysql_query("SELECT * FROM tbl_user WHERE username = '$username'");
+      $lol = mysql_fetch_array($sql);
+      $nama = $_SESSION['username'] = $lol['username'];
+      if($nama == "admin" ){
+                                       ?>
+                                        <li><a href="?menu=user"><span class="glyphicon glyphicon-registration-mark"></span> Daftar User</a></li>
+                                        <?php
+                                                } else {?>
+
+                                                <?php }?>
+                                <li><a href="?menu=pengaturan"><span class="glyphicon glyphicon-cog"></span> Pengaturan</a></li>
+                            <li class="divider"></li>
+                        <li><a href="logout.php"OnClick="return confirm('Apakah anda yakin ingin logout <?php echo $nama?> ?')"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    </ul>
+                 </li>
+              </ul>
+          </div>
+      </div>
+    </nav>
+
+    <div class="card mb-5">
+    	<div class="col-xs-12">
+    		<div class="container">
+    			<div class="table-wrap">
+    				<div class="card-block p-0">
+    				<div class="table-title">
+    					<h4>Data User</h4>
+    				</div>
+    				<div class="table-button">
+    					<button class="btn btn-success btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+    				</div>
+	                <table class="table table-bordered table-sm">
+	                    <thead class="">
+	                        <tr>
+	                            <th>Nama</th>
+	                            <th>Username</th>
+	                            <th>Password</th>
+	                            <th>Jenis Kelamin</th>
+	                            <th>Telp</th>
+	                            <th>Email</th>
+	                            <th colspan="2">Action</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                        <tr>
+	                            <td>John Lilki</td>
+	                            <td>doto2k</td>
+	                            <td>akuganteng</td>
+	                            <td>L</td>
+	                            <td>085860567131</td>
+	                            <td>lorem@ipsum.com</td>
+	                             <td colspan="1" class="text-center"><button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></button></td>
+	                            <td colspan="1" class="text-center"><button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></td>
+	                        </tr>
+	                        <tr>
+	                           <td>John Lilki</td>
+	                            <td>doto2k</td>
+	                            <td>akuganteng</td>
+	                            <td>L</td>
+	                            <td>085860567131</td>
+	                            <td>lorem@ipsum.com</td>
+	                            <td colspan="1" class="text-center"><button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></button></td>
+	                            <td colspan="1" class="text-center"><button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+	                        </tr>
+	                        <tr>
+	                            <td>John Lilki</td>
+	                            <td>doto2k</td>
+	                            <td>akuganteng</td>
+	                            <td>L</td>
+	                            <td>085860567131</td>
+	                            <td>lorem@ipsum.com</td>
+	                             <td colspan="1" class="text-center"><button class="btn btn-danger"><i class="fa fa-trash" aria-hidden="true"></button></td>
+	                            <td colspan="1" class="text-center"><button class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button></td>
+	                        </tr>
+	                    </tbody>
+	                </table>
+           		</div>
+
+	            <div class="card-footer">
+	                <nav aria-label="...">
+	                    <ul class="pagination justify-content-end mt-3 mr-3">
+	                        <li class="page-item disabled">
+	                            <span class="page-link">Previous</span>
+	                        </li>
+	                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+	                        <li class="page-item">
+	                            <span class="page-link">2<span class="sr-only">(current)</span>
+	                            </span>
+	                        </li>
+	                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+	                        <li class="page-item">
+	                            <a class="page-link" href="#">Next</a>
+	                        </li>
+	                    </ul>
+	                </nav>
+	            </div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="asset/js/bootstrap.min.js"></script>	
+</body>
+</html>

@@ -1,0 +1,250 @@
+body {
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+section {
+	width: 100%;
+}
+
+/*---------------------------------------------
+--------------------- nav ------------------*/
+.topnav {
+	background-color: #fff !important;
+}
+
+.navbar {
+	margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+		padding: 20px 20px !important;
+	}
+	.navbar-nav > li > a {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.hvr-underline-reveal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-reveal:before, .nav-active:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  height: 4px;
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-reveal:hover:before, .hvr-underline-reveal:focus:before, .hvr-underline-reveal:active:before, .nav-active:before {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #2098D1;
+}
+
+.custom-navbar-brand {
+	padding-right: 220px !important;
+}
+
+/*---------------------------------------------
+------------------- sidebar  import ------------------*/
+
+.list-group.panel > .list-group-item {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px
+}
+.list-group-submenu {
+  margin-left:20px;
+}
+.strong { font-weight: bold; }
+
+.MainMenu {
+	height: 100%;
+	width: 100%;
+	margin
+}
+.list-group-item {
+	background-color: #282c37;
+}
+.list-group-item-success {
+	background-color: #2e323e;
+}
+
+a.list-group-item, button.list-group-item {
+	color: #f2f2f2;
+}
+a.list-group-item-success, button.list-group-item-success {
+	color: #f2f2f2;
+}
+
+.list-group-item{
+	border: none;
+}
+
+a.list-group-item:hover, button.list-group-item:hover, a.list-group-item:focus, button.list-group-item:focus {
+	background-color: #242831;
+	color: #fff;
+}
+
+.list-group-item:first-child {
+ 	border-top-right-radius: 0px;
+  	border-top-left-radius: 0px
+}
+
+a.list-group-item-success:hover, button.list-group-item-success:hover, a.list-group-item-success:focus, button.list-group-item-success:focus {
+	color: #fff;
+    background-color: #242831;
+}
+
+.sidebar {
+	width: 100%;
+	background-color: #2e323e;
+}
+
+.panel {
+	border: none;
+	background-color: #282c37;
+}
+
+.nopadding {
+	padding: 0;
+}
+
+/*---------------------------------------------
+----------------------- form  import ------------------*/
+
+.file {
+  visibility: hidden;
+  position: absolute;
+}
+
+.btn-primary, .btn-custom {
+	background-color: #2098d1 !important;
+}
+
+.btn-primary:hover, .btn-custom:hover {
+	background-color: #337AB7 !important;
+}
+
+.form-info {
+	margin-bottom: 30px;
+}
+
+.form-paddingbot {
+	padding-bottom: 100px;
+}
+
+.form-control, label, .navbar-nav, .list-group panel, .bootstrap-select, .btn, footer {
+	font-family: 'Montserrat-Regular';
+}
+
+label {
+	color: #333;
+}
+
+.form-info {
+	font-family: 'Montserrat-Regular';
+}
+
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('../fonts/Montserrat-Bold.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/Montserrat-Regular.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('../fonts/Montserrat-SemiBold.ttf') format('TrueType');
+}
+
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url('../fonts/Montserrat-Thin.ttf') format('TrueType');
+}
+
+.footer {
+	position: fixed;
+    height: auto;
+    bottom: 0;
+    width: 100%;
+    padding-top: 100px;
+}
+
+/*-- user table --*/
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	padding: 4px 4px 4px 8px;
+	vertical-align: middle !important;
+}
+
+.table-button {
+	float: right;
+	padding: 0 0 10px 0;
+}
+
+.table-wrap {
+	padding: 20px 20px 10px 20px;
+	border: 2px solid #DDDDDD;
+	border-radius: 4px;
+	margin-top: 20px;
+}
+
+.table-title {
+	float: left;
+}
+
+/*-- data table --*/
+.data-table {
+	margin-top: 60px;
+}
+.first-table{
+	margin-top: 20px;
+}
+.table-header {
+	background-color: #f2f2f2;
+	text-align: center;
+	font-size: 18px;
+}
+
+@media  (min-width: 768px) {
+    .aside {
+        position: fixed;
+        width: 20%;
+    }
+}
+
+.aside-padding {
+	margin-top: -62px;
+}
